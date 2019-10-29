@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <table border="1">
+      <tr>
+          <th>id</th>
+          <th>姓名</th>
+          <th>能力</th>
+          <th>集团</th>
+      </tr>
+      {foreach $data as $v}
+      <tr>
+        <td>{$v.id}</td>
+        <td>{$v.name}</td>
+        <td>{$v.nengli}</td>
+        <td>{$v.jituan}</td>
+    </tr>
+    {/foreach}
+  </table>
+</body>
+</html>
