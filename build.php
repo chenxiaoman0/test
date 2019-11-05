@@ -21,6 +21,9 @@ return [
         'model'      => ['User', 'UserType'],
         'view'       => ['index/index'],
     ],
-
+    'parse_str'=>[
+        '__PUBLIC__'=>'/public/',
+        '__ROOT__' => '/',
+        ]
     // 其他更多的模块定义
 ];

@@ -4,17 +4,18 @@ namespace app\admin\controller;
 
 use app\admin\model\Arc as AppArc;
 use app\admin\controller\CommonAction;
+use think\Controller;
 use think\facade\Session;
 use think\Request;
 
-class Arc extends CommonAction
+class Arc extends Controller
 {
    #显示新闻列表页
     public function index()
     {
-    $arc=new AppArc();
-    $data=$arc->selectpro();
-    return view('arc/index',compact('data'));
+        $arc=new AppArc();
+        $data=$arc->selectpro();
+        return view('arc/index',compact('data'));
     }
     public function modifypro(Request $request){
         dump($request->get());

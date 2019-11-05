@@ -50,7 +50,6 @@
                     </div>
                     <div class="ibox-content">
                         <form method="post" class="form-horizontal" action="#" id="form1">
-                            <input type="hidden" class="" name="u_id" value="{$id}">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">标题</label>
 
@@ -211,13 +210,10 @@
                 //几个参数需要注意一下
                 type: "POST",//方法类型
                 dataType: "json",//预期服务器返回的数据类型
-                url: "{:url('arc/addArcPro')}" ,//url
+                url: "{:url('Mnews/addNewsData')}" ,//url
                 data: $('#form1').serialize(),
                 success: function (data) {
                  if(data==1){
-//                  if(confirm('添加成功')){
-//                      location.href="{:url('arc/index')}";
-//                  }
                      console.log(data);
                  }
                 },

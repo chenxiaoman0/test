@@ -23,7 +23,7 @@ class Login extends Controller
       if($ret==1){
         $this->success('登录成功','admin/index/index');
       }else{
-        $this->error('登录失败','admin/login/admin');
+        $this->error('登录失败','admin/login/index');
       }
     }
 

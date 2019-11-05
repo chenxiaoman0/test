@@ -21,14 +21,4 @@ class MDonateInfo extends Model
             ->select();
         return $data;
     }
-    #新闻删除
-    public function deletepro(){
-
-    }
-    #新闻添加
-    public function addinfo($data)
-    {
-        // var_dump($data);
-       $ret=db('bs_news')->data(['title'=>$data['title'],'c_id'=>$data['c_id'],'content'=>$data['editorValue'],'dec'=>$data['dec'],'organization'=>$data['organization'],'u_id'=>$data['u_id'],'addtime'=>time()])->insert();
-    }
 }

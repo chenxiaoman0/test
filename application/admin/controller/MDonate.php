@@ -4,10 +4,11 @@ namespace app\admin\controller;
 
 use app\admin\controller\CommonAction;
 use app\admin\model\MDonateInfo;
+use think\console\command\make\Controller;
 use think\facade\Session;
 use think\Request;
 // extends CommonAction
-class MDonate 
+class MDonate extends Controller
 {
    #显示处理完成预约
     public function complete(Request $request)
@@ -36,12 +37,11 @@ class MDonate
     public function addArcPro(Request $request)
     {
         $arc=new AppArc();
-        var_dump($request);
-        // $ret=$arc->addinfo($request->post());
-        // if($ret==1){
-        //    return 1;
-        // }else{
-        //    return 0;
-        // }
+        $ret=$arc->addinfo($request->post());
+        if($ret==1){
+           return 1;
+        }else{
+           return 0;
+        }
     }
 }
